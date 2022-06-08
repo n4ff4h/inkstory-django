@@ -1,0 +1,2 @@
+# bloggist
+Django blog app
