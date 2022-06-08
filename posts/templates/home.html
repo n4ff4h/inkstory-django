@@ -1,16 +1,22 @@
 {% extends 'base.html' %} {% block content %}
 
-<h1>Posts</h1>
+<h1 class="pb-3">Posts</h1>
 
-<ul>
+<div class="row px-2">
   {% for post in object_list %}
-  <li>
-    <a href="{% url 'post-detail' post.pk %}">{{ post.title }}</a>
-    - <small>{{ post.author.first_name }}</small>
-    <br />
-    {{ post.body}}
-  </li>
+  <div class="card my-3">
+    <small class="pt-3 ps-3"
+      >{{ post.author.first_name }} {{ post.author.last_name }}</small
+    >
+    <div class="card-body">
+      <a class="card-link" href="{% url 'post-detail' post.pk %}">
+        <h4 class="">{{ post.title }}</h4>
+      </a>
+      <br />
+      <div class="card-text">{{ post.body}}</div>
+    </div>
+  </div>
   {% endfor %}
-</ul>
+</div>
 
 {% endblock %}
