@@ -7,17 +7,16 @@
 {% block content %}
 
 <article>
-  <h1>{{ post.title }}</h1>
-  <small>By: {{ post.author.first_name }} {{ post.author.last_name }}</small>
-  <br />
-  <hr />
-  <br />
-  {{ post.body }}
+  <h1 class="pb-12 font-bold font-lora text-4xl">{{ post.title }}</h1>
+  <p class="font-roboto-mono pb-1">By: {{ post.author.first_name }} {{ post.author.last_name }}</p>
+  <hr class="pb-6" />
+  <p class="text-lg">{{ post.body }}</p>
 
   <br />
   <br />
-  <a href="{% url 'home' %}" class="btn btn-secondary">Back</a>
-  <a href="{% url 'update' post.pk %}" class="btn btn-primary ms-3">Edit</a>
+  <a href="{% url 'home' %}" class="mr-6">Back</a>
+  <a href="{% url 'update' post.pk %}" class="mr-6">Edit</a>
+  <a href="{% url 'delete' post.pk %}" class="">Delete</a>
 </article>
 
 {% endblock %}
