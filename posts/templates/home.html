@@ -13,7 +13,8 @@
         <h4 class="">{{ post.title }}</h4>
       </a>
       <br />
-      <div class="card-text">{{ post.body}}</div>
+      <p class="card-text">{{ post.body}}</p>
+      <a href="{% url 'update' post.pk %}" class="btn btn-primary">Edit</a>
     </div>
   </div>
   {% endfor %}
