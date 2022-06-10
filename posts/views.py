@@ -12,6 +12,7 @@ from .forms import PostCreateForm, PostUpdateForm
 class HomeView(ListView):
     model = Post
     template_name = 'home.html'
+    ordering = ['-post_date']
 
 
 class PostDetailView(DetailView):
