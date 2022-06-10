@@ -10,7 +10,7 @@ module.exports = {
         'dark-gray': '#292929',
       },
       fontFamily: {
-        'lora': ['Lora', 'sans-serif'],
+        'noto-sans': ['Noto Sans', 'sans-serif'],
         'rozha-one': ['Rozha One', 'serif'],
         'roboto-mono': ['Roboto Mono', 'sans-serif'],
       },

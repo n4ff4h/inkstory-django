@@ -63,27 +63,40 @@
           <ul
             class="flex flex-col mt-4 md:flex-row md:space-x-8 md:mt-0 md:text-[16px] md:font-normal"
           >
-            <li>
+            <li class="flex">
               <a
-                href="{% url 'create' %}"
-                class="block py-2 pr-4 pl-3 text-gray-500 border-b border-gray-100 md:border-0 md:p-0"
-                aria-current="page"
-                >Create</a
+                href="{% url 'home' %}"
+                class="block py-2 pr-4 pl-3 my-auto text-gray-500 border-b border-gray-100 md:border-0 md:p-0"
+                >Home</a
               >
             </li>
-            <li>
+            <li class="flex">
               <a
                 href="#"
-                class="block py-2 pr-4 pl-3 text-gray-500 border-b border-gray-100 md:border-0 md:p-0"
-                >Pricing</a
+                class="block py-2 pr-4 pl-3 my-auto text-gray-500 border-b border-gray-100 md:border-0 md:p-0"
+                >About</a
               >
             </li>
-            <li>
+            <li class="flex">
               <a
                 href="#"
-                class="block py-2 pr-4 pl-3 text-gray-500 md:p-0"
+                class="block py-2 pr-4 pl-3 my-auto text-gray-500 md:p-0"
                 >Contact</a
               >
+            </li>
+            <li>
+              <div class="flex flex-row md:space-x-8">
+                  <a
+                href="{% url 'login' %}"
+                class="block py-2 pr-4 pl-3 my-auto text-gray-500 md:p-0"
+                >Log in</a
+              >
+              <a
+                href="{% url 'register' %}"
+                class="block text-white bg-gray-800 hover:bg-gray-900 focus:outline-none focus:ring-4 focus:ring-gray-300 font-medium rounded-full text-sm px-5 py-2.5 mr-2 dark:bg-gray-800 dark:hover:bg-gray-700 dark:focus:ring-gray-700 dark:border-gray-700"
+                >Get Started</a
+              >
+              </div>
             </li>
           </ul>
         </div>

@@ -2,7 +2,7 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
-@import url('https://fonts.googleapis.com/css2?family=Lora:ital,wght@1,600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:wght@600;700;800;900&display=swap');
 
 @import url('https://fonts.googleapis.com/css2?family=Rozha+One&display=swap');
 
@@ -950,6 +950,11 @@ html {
   margin-right: auto;
 }
 
+.my-auto{
+  margin-top: auto;
+  margin-bottom: auto;
+}
+
 .mb-16{
   margin-bottom: 4rem;
 }
@@ -1034,6 +1039,10 @@ html {
   height: 1rem;
 }
 
+.h-full{
+  height: 100%;
+}
+
 .w-6{
   width: 1.5rem;
 }
@@ -1052,6 +1061,10 @@ html {
 
 .w-4{
   width: 1rem;
+}
+
+.max-w-screen-md{
+  max-width: 768px;
 }
 
 .flex-1{
@@ -1172,6 +1185,10 @@ html {
   border-radius: 0.5rem;
 }
 
+.rounded-full{
+  border-radius: 9999px;
+}
+
 .rounded-l-lg{
   border-top-left-radius: 0.5rem;
   border-bottom-left-radius: 0.5rem;
@@ -1263,6 +1280,11 @@ html {
   background-color: rgb(17 24 39 / var(--tw-bg-opacity));
 }
 
+.bg-gray-800{
+  --tw-bg-opacity: 1;
+  background-color: rgb(31 41 55 / var(--tw-bg-opacity));
+}
+
 .bg-opacity-50{
   --tw-bg-opacity: 0.5;
 }
@@ -1330,6 +1352,10 @@ html {
   padding-bottom: 3rem;
 }
 
+.pb-3{
+  padding-bottom: 0.75rem;
+}
+
 .pb-1{
   padding-bottom: 0.25rem;
 }
@@ -1342,10 +1368,6 @@ html {
   padding-top: 0.5rem;
 }
 
-.pb-3{
-  padding-bottom: 0.75rem;
-}
-
 .text-center{
   text-align: center;
 }
@@ -1354,12 +1376,12 @@ html {
   font-family: Rozha One, serif;
 }
 
-.font-lora{
-  font-family: Lora, sans-serif;
-}
-
 .font-roboto-mono{
   font-family: Roboto Mono, sans-serif;
+}
+
+.font-noto-sans{
+  font-family: Noto Sans, sans-serif;
 }
 
 .text-\[22px\]{
@@ -1400,6 +1422,10 @@ html {
 
 .font-light{
   font-weight: 300;
+}
+
+.font-black{
+  font-weight: 900;
 }
 
 .leading-normal{
@@ -1546,6 +1572,11 @@ html {
   background-color: rgb(255 255 255 / var(--tw-bg-opacity));
 }
 
+.hover\:bg-gray-900:hover{
+  --tw-bg-opacity: 1;
+  background-color: rgb(17 24 39 / var(--tw-bg-opacity));
+}
+
 .hover\:text-gray-900:hover{
   --tw-text-opacity: 1;
   color: rgb(17 24 39 / var(--tw-text-opacity));
@@ -1559,6 +1590,15 @@ html {
 .hover\:text-gray-600:hover{
   --tw-text-opacity: 1;
   color: rgb(75 85 99 / var(--tw-text-opacity));
+}
+
+.hover\:text-blue-700:hover{
+  --tw-text-opacity: 1;
+  color: rgb(26 86 219 / var(--tw-text-opacity));
+}
+
+.focus\:z-10:focus{
+  z-index: 10;
 }
 
 .focus\:outline-none:focus{
@@ -1596,6 +1636,11 @@ html {
 .focus\:ring-blue-300:focus{
   --tw-ring-opacity: 1;
   --tw-ring-color: rgb(164 202 254 / var(--tw-ring-opacity));
+}
+
+.focus\:ring-gray-300:focus{
+  --tw-ring-opacity: 1;
+  --tw-ring-color: rgb(209 213 219 / var(--tw-ring-opacity));
 }
 
 .dark .dark\:border-gray-700{
@@ -1728,6 +1773,11 @@ html {
 .dark .dark\:focus\:ring-red-800:focus{
   --tw-ring-opacity: 1;
   --tw-ring-color: rgb(155 28 28 / var(--tw-ring-opacity));
+}
+
+.dark .dark\:focus\:ring-gray-700:focus{
+  --tw-ring-opacity: 1;
+  --tw-ring-color: rgb(55 65 81 / var(--tw-ring-opacity));
 }
 
 @media (min-width: 640px){

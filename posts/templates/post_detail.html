@@ -6,11 +6,11 @@
 
 {% block content %}
 
-<article>
-  <h1 class="pb-12 font-bold font-lora text-4xl">{{ post.title }}</h1>
+<article class="max-w-screen-md mx-auto">
+  <h1 class="pb-12 font-bold text-4xl text-dark-gray">{{ post.title }}</h1>
   <p class="font-roboto-mono font-light pb-1">By: {{ post.author.first_name }} {{ post.author.last_name }} . {{ post.post_date.date }}</p>
   <hr class="pb-6" />
-  <p class="text-lg font-light">{{ post.body }}</p>
+  <p class="text-lg font-light text-gray-600">{{ post.body }}</p>
 
   <br />
   <br />
