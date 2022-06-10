@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+
+<!-- Title -->
+{% block title %} {{ post.title }} {% endblock %}
+<!-- Title end -->
+
+{% block content %}
+
+<article>
+  <h1 class="pb-12 font-bold font-lora text-4xl">{{ post.title }}</h1>
+  <p class="font-roboto-mono pb-1">By: {{ post.author.first_name }} {{ post.author.last_name }}</p>
+  <hr class="pb-6" />
+  <p class="text-lg font-light">{{ post.body }}</p>
+
+  <br />
+  <br />
+  <a href="{% url 'home' %}" class="mr-6">Back</a>
+  <a href="{% url 'update' post.pk %}" class="mr-6">Edit</a>
+  <a href="{% url 'delete' post.pk %}" onclick="return confirm('Are you sure you want to delete this?')" class="">Delete</a>
+</article>
+
+{% endblock %}
