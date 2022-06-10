@@ -2,9 +2,8 @@
 #       while DetailView is used to get just one record
 #       from the database.
 
-from django.shortcuts import render
-from django.urls import reverse_lazy
-from django.views.generic import ListView, DetailView, CreateView, UpdateView, DeleteView
+from django.shortcuts import render, redirect
+from django.views.generic import ListView, DetailView, CreateView, UpdateView
 from .models import Post
 from .forms import PostCreateForm, PostUpdateForm
 
@@ -32,7 +31,13 @@ class UpdatePostView(UpdateView):
     template_name = 'update_post.html'
 
 
-class DeletePostView(DeleteView):
-    model = Post
-    template_name = 'delete_post.html'
-    success_url = reverse_lazy('home')
+# class DeletePostView(DeleteView):
+#     model = Post
+#     template_name = 'delete_post.html'
+#     success_url = reverse_lazy('home')
+
+
+def delete_post(request, pk):
+    post = Post.objects.get(pk=pk)
+    post.delete()
+    return redirect('home')
