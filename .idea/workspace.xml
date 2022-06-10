@@ -2,19 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="253506a7-445b-4ede-b786-a80a93ae2b9d" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/accounts/migrations/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/accounts/templates/registration/login.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/accounts/templates/registration/register.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/accounts/urls.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/codeStyles/codeStyleConfig.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bloggist/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/bloggist/settings.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bloggist/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/bloggist/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/posts/templates/create_post.html" beforeDir="false" afterPath="$PROJECT_DIR$/posts/templates/create_post.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/posts/templates/home.html" beforeDir="false" afterPath="$PROJECT_DIR$/posts/templates/home.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/posts/templates/post_detail.html" beforeDir="false" afterPath="$PROJECT_DIR$/posts/templates/post_detail.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/src/input.css" beforeDir="false" afterPath="$PROJECT_DIR$/static/src/input.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/static/src/output.css" beforeDir="false" afterPath="$PROJECT_DIR$/static/src/output.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tailwind.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/tailwind.config.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/base.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -55,7 +46,7 @@
     "javascript.nodejs.core.library.typings.version": "17.0.41",
     "last_opened_file_path": "/Users/naffah/Code/PythonProjects/bloggist",
     "nodejs_package_manager_path": "npm",
-    "settings.editor.selected.configurable": "preferences.lookFeel"
+    "settings.editor.selected.configurable": "preferences.sourceCode.HTML"
   }
 }]]></component>
   <component name="RunManager">
@@ -93,7 +84,7 @@
       <option name="presentableId" value="Default" />
       <updated>1654761684433</updated>
       <workItem from="1654761686197" duration="1450000" />
-      <workItem from="1654763565621" duration="51670000" />
+      <workItem from="1654763565621" duration="59498000" />
     </task>
     <servers />
   </component>
