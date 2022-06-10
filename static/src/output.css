@@ -1056,6 +1056,10 @@ html {
   height: 1rem;
 }
 
+.h-10{
+  height: 2.5rem;
+}
+
 .w-6{
   width: 1.5rem;
 }
@@ -1078,6 +1082,14 @@ html {
 
 .w-4{
   width: 1rem;
+}
+
+.w-9{
+  width: 2.25rem;
+}
+
+.w-10{
+  width: 2.5rem;
 }
 
 .max-w-screen-md{
