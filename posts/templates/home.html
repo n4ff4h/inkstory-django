@@ -18,7 +18,7 @@
               {{ post.title }}
             </h5>
             <p class="mb-2 font-light text-gray-600 dark:text-gray-400">
-              {{ post.body }}
+              {{ post.body|slice:":200" }}
             </p>
           </div>
         </a>

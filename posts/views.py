@@ -6,6 +6,8 @@ from django.shortcuts import render, redirect
 from django.views.generic import ListView, DetailView, CreateView, UpdateView
 from .models import Post
 from .forms import PostCreateForm, PostUpdateForm
+from django.contrib.auth.decorators import login_required
+from django.utils.decorators import method_decorator
 
 
 # Create your views here.
@@ -20,22 +22,18 @@ class PostDetailView(DetailView):
     template_name = 'post_detail.html'
 
 
+@method_decorator(login_required(login_url='/registration/login'), name='dispatch')
 class CreatePostView(CreateView):
     model = Post
     form_class = PostCreateForm
     template_name = 'create_post.html'
 
 
+@method_decorator(login_required(login_url='/registration/login'), name='dispatch')
 class UpdatePostView(UpdateView):
     model = Post
     form_class = PostUpdateForm
     template_name = 'update_post.html'
-
-
-# class DeletePostView(DeleteView):
-#     model = Post
-#     template_name = 'delete_post.html'
-#     success_url = reverse_lazy('home')
 
 
 def delete_post(request, pk):
