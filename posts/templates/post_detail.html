@@ -17,7 +17,7 @@
     <br/>
     <a href="{% url 'home' %}" class="mr-6 text-dark-gray">Back</a>
     {% if user.is_authenticated %}
-      <a href="{% url 'update' post.pk %}" class="mr-6 text-dark-gray">Edit</a>
+      <a href="{% url 'update' post.slug %}" class="mr-6 text-dark-gray">Edit</a>
       <button type="button" data-modal-toggle="popup-modal" class="text-dark-gray">Delete</button>
     {% endif %}
   </article>

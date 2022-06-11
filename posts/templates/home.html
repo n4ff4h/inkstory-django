@@ -6,7 +6,7 @@
     <div class="row">
       {% for post in object_list %}
         <a
-          href="{% url 'post-detail' post.pk %}"
+          href="{% url 'post-detail' post.slug %}"
           class="flex flex-row items-center mb-4 bg-white rounded-lg shadow-sm hover:bg-gray-100 dark:border-gray-700 dark:bg-gray-800 dark:hover:bg-gray-700"
         >
           <div class="flex flex-col justify-between p-4 leading-normal px-8">
