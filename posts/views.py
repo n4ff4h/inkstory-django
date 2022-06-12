@@ -8,6 +8,7 @@ from .models import Post
 from .forms import PostCreateForm, PostUpdateForm
 from django.contrib.auth.decorators import login_required
 from django.utils.decorators import method_decorator
+from taggit.models import Tag
 
 
 # Create your views here.
@@ -40,3 +41,12 @@ def delete_post(request, pk):
     post = Post.objects.get(pk=pk)
     post.delete()
     return redirect('home')
+
+
+def tags_view(request, tag):
+    # Filter tags from the tag parameter passed from url
+    tags = Tag.objects.filter(slug=tag).values_list('name', flat=True)
+    # Filter posts based on tags
+    posts = Post.objects.filter(tags__name__in=tags)
+
+    return render(request, 'tag_posts.html', {'tag': tag, 'posts': posts})
