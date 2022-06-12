@@ -11,7 +11,7 @@
           <div class="flex flex-col justify-between p-4 leading-normal px-8">
             <p class="font-roboto-mono text-sm pb-3">By: {{ post.author.first_name }} {{ post.author.last_name }}
               . {{ post.post_date.date }}</p>
-            <a href="{% url 'post-detail' post.slug %}" class="hover:underline">
+            <a href="{% url 'post_detail' post.slug %}" class="hover:underline">
               <h5
                 class="mb-2 text-xl font-semibold tracking-tight text-dark-gray dark:text-white">
                 {{ post.title }}
@@ -23,7 +23,7 @@
             <div class="row">
               {% for tag in post.tags.all %}
                 <span
-                  class="bg-blue-100 hover:bg-blue-200 text-blue-800 text-xs font-semibold mr-2 px-2.5 py-0.5 rounded dark:bg-blue-200 dark:text-blue-800 dark:hover:bg-blue-300">#{{ tag.name }}</span>
+                  class="bg-blue-100 hover:bg-blue-200 text-blue-800 text-xs font-semibold mr-2 px-2.5 py-0.5 rounded dark:bg-blue-200 dark:text-blue-800 dark:hover:bg-blue-300 transition">#{{ tag.name }}</span>
               {% endfor %}
             </div>
           </div>

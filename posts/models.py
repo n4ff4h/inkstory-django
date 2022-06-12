@@ -20,4 +20,4 @@ class Post(models.Model):
 
     def get_absolute_url(self):
         # Redirect to post detail page for the specified post id
-        return reverse('post-detail', args=(self.slug,))
+        return reverse('post_detail', args=(self.slug,))
