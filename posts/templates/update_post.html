@@ -7,7 +7,7 @@
 
 {% block content %}
   {% if user.id == post.author.id %}
-    <div class="container max-w-screen-md mx-auto">
+    <div class="w-full max-w-screen-md mx-auto">
       <h1 class="pb-12 font-bold font-lora text-4xl">Update Post</h1>
 
       <form method="post">
@@ -19,7 +19,7 @@
       </form>
     </div>
   {% else %}
-    <div class="max-w-md flex mx-auto pb-[160px]">
+    <div class="w-full max-w-md flex mx-auto pb-[160px]">
       <img src="{% static '/images/locked.svg' %}" alt="Access Denied" class="my-auto">
     </div>
   {% endif %}
