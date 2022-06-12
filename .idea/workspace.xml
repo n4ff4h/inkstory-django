@@ -2,10 +2,16 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="253506a7-445b-4ede-b786-a80a93ae2b9d" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/static/images/locked.svg" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/posts/templates/home.html" beforeDir="false" afterPath="$PROJECT_DIR$/posts/templates/home.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/accounts/templates/registration/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/accounts/templates/registration/login.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/accounts/templates/registration/register.html" beforeDir="false" afterPath="$PROJECT_DIR$/accounts/templates/registration/register.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/posts/templates/create_post.html" beforeDir="false" afterPath="$PROJECT_DIR$/posts/templates/create_post.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/posts/templates/post_detail.html" beforeDir="false" afterPath="$PROJECT_DIR$/posts/templates/post_detail.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/posts/templates/tag_posts.html" beforeDir="false" afterPath="$PROJECT_DIR$/posts/templates/tag_posts.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/posts/templates/update_post.html" beforeDir="false" afterPath="$PROJECT_DIR$/posts/templates/update_post.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/static/src/output.css" beforeDir="false" afterPath="$PROJECT_DIR$/static/src/output.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/base.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -50,6 +56,11 @@
     &quot;settings.editor.selected.configurable&quot;: &quot;preferences.sourceCode.HTML&quot;
   }
 }</component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/static/images" />
+    </key>
+  </component>
   <component name="RunManager">
     <configuration name="bloggist" type="Python.DjangoServer" factoryName="Django server">
       <module name="bloggist" />
