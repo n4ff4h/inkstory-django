@@ -27,8 +27,15 @@ class PostDetailView(DetailView):
     def get_context_data(self, **kwargs):
         context = super(PostDetailView, self).get_context_data(**kwargs)
         post = get_object_or_404(Post, slug=self.kwargs['slug'])
+
+        liked = False
+        # If the user liked the post
+        if post.likes.filter(id=self.request.user.id).exists():
+            liked = True
+
         total_likes = post.total_likes()
         context["total_likes"] = total_likes
+        context["liked"] = liked
         return context
 
 
@@ -73,6 +80,11 @@ def tags_view(request, tag):
 def like_view(request, pk):
     # Look up posts by post_id and assign it to post variable
     post = get_object_or_404(Post, id=request.POST.get('post_id'))
-    post.likes.add(request.user)
-
+    liked = False
+    # If the user liked the post
+    if post.likes.filter(id=request.user.id).exists():
+        post.likes.remove(request.user)  # unlike
+    else:
+        post.likes.add(request.user)  # like
+        liked = True
     return HttpResponseRedirect(reverse('post_detail', args=[str(post.slug)]))
