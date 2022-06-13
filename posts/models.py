@@ -13,7 +13,11 @@ class Post(models.Model):
     author = models.ForeignKey(User, default=None, on_delete=models.CASCADE)
     tags = TaggableManager()
     body = models.TextField()
+    likes = models.ManyToManyField(User, related_name="blog_posts")
     post_date = models.DateTimeField(auto_now_add=True)
+
+    def total_likes(self):
+        return self.likes.count()
 
     def __str__(self) -> str:
         return self.title + ' | ' + str(self.author)

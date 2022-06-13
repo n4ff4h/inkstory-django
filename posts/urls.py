@@ -2,6 +2,7 @@ from django.urls import path
 from .views import HomeView, PostDetailView, CreatePostView, UpdatePostView
 from . import views
 
+
 urlpatterns = [
     path('', HomeView.as_view(), name="home"),
     # pk: primary key of the model which is passed into the view
@@ -10,4 +11,5 @@ urlpatterns = [
     path('posts/edit/<slug:slug>/', UpdatePostView.as_view(), name="post_update"),
     path('delete/<int:uid>/<int:pk>/', views.delete_post, name="post_delete"),
     path('t/<str:tag>/', views.tags_view, name="tags"),
+    path('like/<int:pk>', views.like_view, name="like_post"),
 ]

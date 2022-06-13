@@ -2,13 +2,15 @@
 #       while DetailView is used to get just one record
 #       from the database.
 
-from django.shortcuts import render, redirect
+from django.shortcuts import render, redirect, get_object_or_404
 from django.views.generic import ListView, DetailView, CreateView, UpdateView
 from .models import Post
 from .forms import PostCreateForm, PostUpdateForm
 from django.contrib.auth.decorators import login_required
 from django.utils.decorators import method_decorator
 from taggit.models import Tag
+from django.http import HttpResponseRedirect
+from django.urls import reverse
 
 
 # Create your views here.
@@ -21,6 +23,13 @@ class HomeView(ListView):
 class PostDetailView(DetailView):
     model = Post
     template_name = 'post_detail.html'
+
+    def get_context_data(self, **kwargs):
+        context = super(PostDetailView, self).get_context_data(**kwargs)
+        post = get_object_or_404(Post, slug=self.kwargs['slug'])
+        total_likes = post.total_likes()
+        context["total_likes"] = total_likes
+        return context
 
 
 @method_decorator(login_required(login_url='/registration/login'), name='dispatch')
@@ -59,3 +68,11 @@ def tags_view(request, tag):
     posts = Post.objects.filter(tags__name__in=tags)
 
     return render(request, 'tag_posts.html', {'tag': tag, 'posts': posts})
+
+
+def like_view(request, pk):
+    # Look up posts by post_id and assign it to post variable
+    post = get_object_or_404(Post, id=request.POST.get('post_id'))
+    post.likes.add(request.user)
+
+    return HttpResponseRedirect(reverse('post_detail', args=[str(post.slug)]))
