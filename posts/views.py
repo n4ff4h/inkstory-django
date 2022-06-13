@@ -29,6 +29,11 @@ class CreatePostView(CreateView):
     form_class = PostCreateForm
     template_name = 'create_post.html'
 
+    # Save logged-in user as post author
+    def form_valid(self, form):
+        form.instance.author = self.request.user
+        return super(CreatePostView, self).form_valid(form)
+
 
 @method_decorator(login_required(login_url='/registration/login'), name='dispatch')
 class UpdatePostView(UpdateView):
@@ -37,9 +42,13 @@ class UpdatePostView(UpdateView):
     template_name = 'update_post.html'
 
 
-def delete_post(request, pk):
-    post = Post.objects.get(pk=pk)
-    post.delete()
+# uid is post user id
+# pk is post primary key
+def delete_post(request, uid, pk):
+    # check if post author id matches logged-in users id
+    if uid == request.user.id:
+        post = Post.objects.get(pk=pk)
+        post.delete()
     return redirect('home')
 
 
