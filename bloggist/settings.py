@@ -51,6 +51,7 @@ INSTALLED_APPS = [
     # Other Django apps
     'compressor',
     'taggit',
+    'tinymce',
 ]
 
 MIDDLEWARE = [

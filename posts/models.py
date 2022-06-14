@@ -3,6 +3,7 @@ from django.contrib.auth.models import User
 from django.urls import reverse
 from datetime import datetime, date
 from taggit.managers import TaggableManager
+from tinymce import models as tinymce_models
 
 
 # Create your models here.
@@ -12,7 +13,7 @@ class Post(models.Model):
     # model.CASCADE: will delete all posts related to the user, if user is deleted
     author = models.ForeignKey(User, default=None, on_delete=models.CASCADE)
     tags = TaggableManager()
-    body = models.TextField()
+    body = tinymce_models.HTMLField()
     likes = models.ManyToManyField(User, related_name="blog_posts")
     post_date = models.DateTimeField(auto_now_add=True)
 
