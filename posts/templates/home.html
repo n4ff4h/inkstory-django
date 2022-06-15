@@ -18,7 +18,7 @@
               </h5>
             </a>
             <p class="mb-4 font-light text-gray-600 dark:text-gray-400">
-              {{ post.body|slice:":200" }}
+              {{ post.snippet }}
             </p>
             <div class="row">
               {% for tag in post.tags.all %}

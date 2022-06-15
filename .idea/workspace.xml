@@ -2,8 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="253506a7-445b-4ede-b786-a80a93ae2b9d" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/posts/migrations/0013_post_snippet.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/posts/migrations/0014_alter_post_snippet.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bloggist/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/bloggist/settings.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/posts/forms.py" beforeDir="false" afterPath="$PROJECT_DIR$/posts/forms.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/posts/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/posts/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/posts/templates/home.html" beforeDir="false" afterPath="$PROJECT_DIR$/posts/templates/home.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/posts/templates/tag_posts.html" beforeDir="false" afterPath="$PROJECT_DIR$/posts/templates/tag_posts.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -90,7 +95,7 @@
       <updated>1654761684433</updated>
       <workItem from="1654761686197" duration="1450000" />
       <workItem from="1654763565621" duration="77786000" />
-      <workItem from="1655264878909" duration="1979000" />
+      <workItem from="1655264878909" duration="6305000" />
     </task>
     <servers />
   </component>

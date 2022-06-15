@@ -15,6 +15,7 @@ class Post(models.Model):
     tags = TaggableManager()
     body = tinymce_models.HTMLField()
     likes = models.ManyToManyField(User, related_name="blog_posts")
+    snippet = models.CharField(max_length=255)
     post_date = models.DateTimeField(auto_now_add=True)
 
     def total_likes(self):
