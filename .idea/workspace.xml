@@ -3,8 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="253506a7-445b-4ede-b786-a80a93ae2b9d" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/theme/static_src/src/styles.css" beforeDir="false" afterPath="$PROJECT_DIR$/theme/static_src/src/styles.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/theme/static_src/tailwind.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/theme/static_src/tailwind.config.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bloggist/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/bloggist/settings.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -51,6 +50,7 @@
 }</component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/static/css" />
       <recent name="$PROJECT_DIR$/static/images" />
     </key>
   </component>
@@ -90,6 +90,7 @@
       <updated>1654761684433</updated>
       <workItem from="1654761686197" duration="1450000" />
       <workItem from="1654763565621" duration="77786000" />
+      <workItem from="1655264878909" duration="1979000" />
     </task>
     <servers />
   </component>
