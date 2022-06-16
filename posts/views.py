@@ -79,12 +79,11 @@ def tags_view(request, tag):
 
 def like_view(request, pk):
     # Look up posts by post_id and assign it to post variable
-    post = get_object_or_404(Post, id=request.POST.get('post_id'))
-    liked = False
+    post = get_object_or_404(Post, id=pk)
     # If the user liked the post
     if post.likes.filter(id=request.user.id).exists():
         post.likes.remove(request.user)  # unlike
     else:
         post.likes.add(request.user)  # like
-        liked = True
-    return HttpResponseRedirect(reverse('post_detail', args=[str(post.slug)]))
+    post.save()
+    return render(request, 'partials/likes_section.html', context={'post': post})
