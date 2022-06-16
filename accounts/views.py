@@ -1,8 +1,8 @@
 from django.shortcuts import render, redirect
 from django.views import generic
-from django.contrib.auth.forms import UserCreationForm
+from django.contrib.auth.forms import UserChangeForm
 from django.urls import reverse_lazy
-from .forms import RegisterForm
+from .forms import RegisterForm, ProfileUpdateForm
 from django.contrib import messages
 
 
@@ -28,3 +28,11 @@ class UserRegisterView(generic.CreateView):
             return redirect(to='login')
 
         return render(request, self.template_name, {'form': form})
+
+
+class ProfileUpdateView(generic.UpdateView):
+    form_class = ProfileUpdateForm
+    template_name = 'registration/update_profile.html'
+
+    def get_object(self, queryset=None):
+        return self.request.user
