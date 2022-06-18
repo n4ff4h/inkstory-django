@@ -1,7 +1,7 @@
 {% extends 'base.html' %} {% block content %}
 
   <div class="w-full px-2 sm:px-0">
-    <h1 class="pb-8 font-bold text-4xl text-dark-gray">Discover</h1>
+    <h1 class="pb-8 font-bold text-3xl md:text-4xl text-dark-gray">Discover</h1>
 
     <div class="row">
       {% for post in object_list %}
@@ -14,7 +14,7 @@
               . {{ post.post_date.date }}</p>
             <a href="{% url 'post_detail' post.slug %}" class="hover:underline">
               <h5
-                class="mb-2 text-xl md:text-2xl font-semibold tracking-tight text-dark-gray">
+                class="mb-2 text-xl font-semibold tracking-tight text-dark-gray">
                 {{ post.title }}
               </h5>
             </a>

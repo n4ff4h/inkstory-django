@@ -51,7 +51,7 @@
         <!-- Dropdown menu -->
         <div class="flex items-center md:order-2">
           <button type="button"
-                  class="flex mr-3 text-sm bg-gray-800 rounded-full md:mr-0 focus:ring-4 focus:ring-gray-300"
+                  class="flex mr-3 text-sm bg-gray-800 rounded-full md:mr-0 focus:ring-4 focus:ring-blue-300"
                   id="user-menu-button" aria-expanded="false" type="button" data-dropdown-toggle="dropdown">
             <span class="sr-only">Open user menu</span>
             <img class="w-10 h-10 rounded-full"
@@ -66,7 +66,7 @@
             <!-- User information -->
             <div class="py-3 px-4">
               <span
-                class="block text-sm text-gray-900 dark:text-white">{{ request.user.first_name }} {{ request.user.last_name }}</span>
+                class="block text-sm text-gray-900">{{ request.user.first_name }} {{ request.user.last_name }}</span>
               <span
                 class="block text-sm font-medium text-gray-500 truncate">{{ request.user.email }}</span>
             </div>
@@ -116,7 +116,7 @@
       {% endif %}
       <div class="hidden w-full md:block md:w-auto" id="mobile-menu">
         <ul
-          class="flex flex-col mt-4 md:flex-row md:space-x-8 md:mt-0 md:text-[14px] md:font-normal"
+          class="flex flex-col mt-4 md:flex-row md:space-x-8 md:mt-0 md:text-[16px] md:font-normal"
         >
           <!-- Nav item -->
           <li class="flex">
