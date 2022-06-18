@@ -17,7 +17,7 @@ class PostCreateForm(forms.ModelForm):
 
     class Meta:
         model = Post
-        fields = ('title', 'slug', 'tags', 'snippet', 'body')
+        fields = ('title', 'slug', 'tags', 'header_image', 'snippet', 'body')
 
         widgets = {
             'title': forms.TextInput(attrs={'class': 'block p-2 mb-4 w-full text-gray-900 bg-gray-50 rounded-lg border '
@@ -30,6 +30,11 @@ class PostCreateForm(forms.ModelForm):
                                                     'focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 '
                                                     'dark:placeholder-gray-400 dark:text-white '
                                                     'dark:focus:ring-blue-500 dark:focus:border-blue-500'}),
+            'header_image': forms.FileInput(
+                attrs={'class': 'block mb-4 w-full text-sm text-gray-900 bg-gray-50 rounded-lg '
+                                'border border-gray-300 cursor-pointer dark:text-gray-400 '
+                                'focus:outline-none dark:bg-gray-700 dark:border-gray-600 '
+                                'dark:placeholder-gray-400'}),
             'snippet': forms.Textarea(
                 attrs={'rows': '4', 'class': 'block p-2 mb-4 w-full text-gray-900 bg-gray-50 rounded-lg border '
                                              'border-gray-300 sm:text-xs focus:ring-blue-500 '
@@ -51,7 +56,7 @@ class PostUpdateForm(forms.ModelForm):
 
     class Meta:
         model = Post
-        fields = ('title', 'slug', 'tags', 'snippet', 'body')
+        fields = ('title', 'slug', 'tags', 'header_image', 'snippet', 'body')
 
         widgets = {
             'title': forms.TextInput(attrs={
@@ -64,6 +69,11 @@ class PostUpdateForm(forms.ModelForm):
                                                     'focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 '
                                                     'dark:placeholder-gray-400 dark:text-white '
                                                     'dark:focus:ring-blue-500 dark:focus:border-blue-500'}),
+            'header_image': forms.FileInput(
+                attrs={'class': 'block mb-4 w-full text-sm text-gray-900 bg-gray-50 rounded-lg '
+                                'border border-gray-300 cursor-pointer dark:text-gray-400 '
+                                'focus:outline-none dark:bg-gray-700 dark:border-gray-600 '
+                                'dark:placeholder-gray-400'}),
             'snippet': forms.Textarea(
                 attrs={'rows': '4', 'class': 'block p-2 mb-4 w-full text-gray-900 bg-gray-50 rounded-lg border '
                                              'border-gray-300 sm:text-xs focus:ring-blue-500 '

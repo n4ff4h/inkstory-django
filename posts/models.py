@@ -10,6 +10,7 @@ from tinymce import models as tinymce_models
 class Post(models.Model):
     title = models.CharField(max_length=255)
     slug = models.SlugField(unique=True)
+    header_image = models.ImageField(null=True, blank=True, upload_to='images/')
     # model.CASCADE: will delete all posts related to the user, if user is deleted
     author = models.ForeignKey(User, default=None, on_delete=models.CASCADE)
     tags = TaggableManager()
