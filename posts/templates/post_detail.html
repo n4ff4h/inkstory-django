@@ -63,6 +63,9 @@
 
     <h1 class="pb-6 font-bold text-4xl text-dark-gray">{{ post.title }}</h1>
     <hr class="pb-6"/>
+    {% if post.header_image %}
+      <img class="w-full h-[414px] pb-6" src="{{ post.header_image.url }}" alt="header-image">
+    {% endif %}
     <p class="text-lg font-light text-gray-600">{{ post.body|safe }}</p>
 
     <br/>
