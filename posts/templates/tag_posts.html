@@ -1,30 +1,30 @@
 {% extends 'base.html' %} {% block content %}
 
   <div class="w-full px-2 sm:px-0">
-    <h1 class="pb-12 font-bold text-4xl text-dark-gray">#{{ tag }}</h1>
+    <h1 class="pb-8 font-bold text-4xl text-dark-gray">#{{ tag }}</h1>
 
     <div class="row">
       {% for post in posts %}
         <div
-          class="flex flex-row items-center mb-4 bg-white rounded-lg shadow-sm dark:border-gray-700 dark:bg-gray-800 dark:hover:bg-gray-700"
+          class="flex flex-row items-center mb-4 bg-white rounded-lg shadow dark:border-gray-700 dark:bg-gray-800 dark:hover:bg-gray-700"
         >
           <div class="flex flex-col justify-between p-4 leading-normal px-8">
             <p class="font-roboto-mono text-sm font-light pb-3">By: {{ post.author.first_name }} {{ post.author.last_name }}
               . {{ post.post_date.date }}</p>
             <a href="{% url 'post_detail' post.slug %}" class="hover:underline">
               <h5
-                class="mb-2 text-2xl font-semibold tracking-tight text-dark-gray dark:text-white">
+                class="mb-2 text-xl md:text-2xl font-semibold tracking-tight text-dark-gray dark:text-white">
                 {{ post.title }}
               </h5>
             </a>
             <p class="mb-4 font-light text-gray-600 dark:text-gray-400">
               {{ post.snippet }}
             </p>
-            <div class="row">
+            <div class="flex flex-wrap gap-y-2">
               {% for tag in post.tags.all %}
                 <a href="{% url 'tags' tag|slugify %}">
                   <span
-                    class="bg-blue-100 hover:bg-blue-200 text-blue-800 text-sm font-medium mr-2 px-2.5 py-0.5 rounded dark:bg-blue-200 dark:text-blue-800 dark:hover:bg-blue-300 transition">#{{ tag.name }}</span>
+                    class="bg-blue-100 hover:bg-blue-200 text-blue-700 text-sm font-normal mr-2 px-2.5 py-0.5 rounded transition">#{{ tag.name }}</span>
                 </a>
               {% endfor %}
             </div>
