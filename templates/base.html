@@ -127,7 +127,7 @@
             >
           </li>
 
-         <!-- Nav item -->
+          <!-- Nav item -->
           <li class="flex">
             <a
               href="#"
@@ -181,5 +181,8 @@
         e.detail.headers['X-CSRFToken'] = '{{ csrf_token }}';
     })
 </script>
+
+{% block script %}
+{% endblock %}
 </body>
 </html>

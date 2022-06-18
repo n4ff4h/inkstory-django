@@ -9,8 +9,9 @@ from .forms import PostCreateForm, PostUpdateForm
 from django.contrib.auth.decorators import login_required
 from django.utils.decorators import method_decorator
 from taggit.models import Tag
-from django.http import HttpResponseRedirect
-from django.urls import reverse
+from django.views.decorators.csrf import requires_csrf_token
+from django.core.files.storage import FileSystemStorage
+from django.http import JsonResponse
 
 
 # Create your views here.
@@ -56,6 +57,55 @@ class UpdatePostView(UpdateView):
     model = Post
     form_class = PostUpdateForm
     template_name = 'update_post.html'
+
+
+@requires_csrf_token
+def upload_image_view(request):
+    f = request.FILES['image']
+    fs = FileSystemStorage()
+    file_name = str(f).split('.')[0]
+    file = fs.save(file_name, f)
+    file_url = fs.url(file)
+
+    return JsonResponse({'success': 1, 'file': {'url': file_url}})
+
+
+@requires_csrf_token
+def upload_file_view(request):
+    f = request.FILES['file']
+    fs = FileSystemStorage()
+    file_name, ext = str(f).split('.')
+    print(file_name, ext)
+    file = fs.save(str(f), f)
+    file_url = fs.url(file)
+    file_size = fs.size(file)
+
+    return JsonResponse({'success': 1, 'file': {'url': file_url, 'name': str(f), 'size': file_size}})
+
+
+@requires_csrf_token
+def upload_link_view(request):
+    import requests
+    from bs4 import BeautifulSoup
+
+    print(request.GET['url'])
+    url = request.GET['url']
+    response = requests.get(url)
+    soup = BeautifulSoup(response.text, features="html.parser")
+    metas = soup.find_all('meta')
+    description = ""
+    title = ""
+    image = ""
+    for meta in metas:
+        if 'property' in meta.attrs:
+            if meta.attrs['property'] == 'og:image':
+                image = meta.attrs['content']
+        elif 'name' in meta.attrs:
+            if meta.attrs['name'] == 'description':
+                description = meta.attrs['content']
+            if meta.attrs['name'] == 'title':
+                title = meta.attrs['content']
+    return JsonResponse({'success': 1, 'meta': {"description": description, "title": title, "image": {"url": image}}})
 
 
 # uid is post user id
