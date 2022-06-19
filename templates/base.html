@@ -9,6 +9,18 @@
   <title>{% block title %} Bloggist {% endblock %}</title>
 
   {% tailwind_css %}
+
+  <style>
+    div[data-editorjs-wrapper] {
+        max-width: none;
+        border-radius: 0.5rem;
+        border-color: #D1D5DB;
+    }
+
+    .codex-editor--narrow .codex-editor__redactor {
+        margin-right: 0;
+    }
+  </style>
 </head>
 
 <body class="bg-gray-50">
