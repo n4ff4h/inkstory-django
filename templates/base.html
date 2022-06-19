@@ -71,10 +71,10 @@
         <div class="flex items-center md:order-2">
           <button type="button"
                   class="flex mr-3 text-sm bg-gray-800 rounded-full md:mr-0 focus:ring-4 focus:ring-blue-300"
-                  id="user-menu-button" aria-expanded="false" type="button" data-dropdown-toggle="dropdown">
+                  id="user-menu-button" aria-expanded="false" data-dropdown-toggle="dropdown">
             <span class="sr-only">Open user menu</span>
             <img class="w-10 h-10 rounded-full"
-                 src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSJxA5cTf-5dh5Eusm0puHbvAhOrCRPtckzjA&usqp=CAU"
+                 src="{{ request.user.profile.avatar.url }}"
                  alt="user photo">
           </button>
 
@@ -96,15 +96,15 @@
                 <a href="#"
                    class="block py-2 px-4 text-sm text-gray-700 hover:bg-gray-100">Dashboard</a>
               </li>
-              <!-- Write -->
-              <li>
-                <a href="{% url 'post_create' %}"
-                   class="block py-2 px-4 text-sm text-gray-700 hover:bg-gray-100">Write</a>
-              </li>
               <!-- Profile -->
               <li>
                 <a href="{% url 'profile_update' %}"
-                   class="block py-2 px-4 text-sm text-gray-700 hover:bg-gray-100">Profile</a>
+                   class="block py-2 px-4 text-sm text-gray-700 hover:bg-gray-100">Your Profile</a>
+              </li>
+              <!-- Write -->
+              <li>
+                <a href="{% url 'post_create' %}"
+                   class="block py-2 px-4 text-sm text-gray-700 hover:bg-gray-100">Create Post</a>
               </li>
               <!-- Sign out -->
               <li>

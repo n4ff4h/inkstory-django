@@ -6,7 +6,6 @@ from taggit.managers import TaggableManager
 from django_editorjs import EditorJsField
 
 
-# Create your models here.
 class Post(models.Model):
     title = models.CharField(max_length=255)
     slug = models.SlugField(unique=True)
