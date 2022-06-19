@@ -52,7 +52,7 @@ INSTALLED_APPS = [
     'tailwind',
     'theme',
     'taggit',
-    'django_editorjs',
+    'django_quill',
     'django_browser_reload',
 ]
 

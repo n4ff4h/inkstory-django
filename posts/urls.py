@@ -1,7 +1,5 @@
 from django.urls import path
-from .views import HomeView, PostDetailView, CreatePostView, UpdatePostView, delete_post, tags_view, like_view, \
-    upload_image_view, upload_file_view, upload_link_view
-from django.views.decorators.csrf import csrf_exempt
+from .views import HomeView, PostDetailView, CreatePostView, UpdatePostView, delete_post, tags_view, like_view
 
 urlpatterns = [
     path('', HomeView.as_view(), name="home"),
@@ -12,7 +10,4 @@ urlpatterns = [
     path('delete/<int:uid>/<int:pk>/', delete_post, name="post_delete"),
     path('t/<str:tag>/', tags_view, name="tags"),
     path('like/<int:pk>', like_view, name="like_post"),
-    path('image-upload/', csrf_exempt(upload_image_view)),
-    path('file-upload/', csrf_exempt(upload_file_view)),
-    path('linkfetching/', upload_link_view),
 ]

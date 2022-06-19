@@ -3,7 +3,7 @@ from django.contrib.auth.models import User
 from django.urls import reverse
 from datetime import datetime, date
 from taggit.managers import TaggableManager
-from django_editorjs import EditorJsField
+from django_quill.fields import QuillField
 
 
 class Post(models.Model):
@@ -13,29 +13,7 @@ class Post(models.Model):
     # model.CASCADE: will delete all posts related to the user, if user is deleted
     author = models.ForeignKey(User, default=None, on_delete=models.CASCADE)
     tags = TaggableManager()
-    body = EditorJsField(editorjs_config={
-        "tools": {
-            "Link": {
-                "config": {
-                    "endpoint": "/linkfetching/"
-                }
-            },
-            "Image": {
-                "config": {
-                    "endpoints": {
-                        "byFile": "/image-upload/",
-                        "byUrl": "/image-upload/",
-                    },
-                    "additionalRequestHeaders": [{"Content-Type": "multipart/form-data"}]
-                }
-            },
-            "Attaches": {
-                "config": {
-                    "endpoint": "/file-upload/"
-                },
-            }
-        }
-    })
+    body = QuillField()
 
     likes = models.ManyToManyField(User, related_name="blog_posts")
     snippet = models.CharField(max_length=255)
