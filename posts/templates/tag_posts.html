@@ -9,7 +9,7 @@
           class="flex flex-row items-center mb-4 bg-white rounded-lg shadow dark:border-gray-700 dark:bg-gray-800 dark:hover:bg-gray-700"
         >
           <div class="flex flex-col justify-between p-4 leading-normal px-8">
-            <p class="font-roboto-mono text-sm font-light pb-3">By: {{ post.author.first_name }} {{ post.author.last_name }}
+            <p class="font-roboto-mono text-sm font-light pb-3">{{ post.author.first_name }} {{ post.author.last_name }}
               . {{ post.post_date.date }}</p>
             <a href="{% url 'post_detail' post.slug %}" class="hover:underline">
               <h5

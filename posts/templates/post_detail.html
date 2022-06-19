@@ -21,7 +21,7 @@
               {{ post.author.first_name }} {{ post.author.last_name }}
             </p>
           </a>
-          <small class="font-roboto-mono font-light text-gray-600">{{ post.post_date.date }}</small>
+          <p class="font-roboto-mono font-light text-md text-gray-600 my-auto">{{ post.post_date.date }}</p>
         </div>
       </div>
 
@@ -66,7 +66,7 @@
     {% if post.header_image %}
       <img class="w-full h-[414px] pb-6" src="{{ post.header_image.url }}" alt="header-image">
     {% endif %}
-    <p class="text-lg font-light text-gray-600" id="post-body"></p>
+    <p id="post-body">{{ post.body.html | safe }}</p>
 
     <br/>
     <br/>

@@ -2,7 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="253506a7-445b-4ede-b786-a80a93ae2b9d" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/static/css/quill.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/posts/templates/home.html" beforeDir="false" afterPath="$PROJECT_DIR$/posts/templates/home.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/posts/templates/post_detail.html" beforeDir="false" afterPath="$PROJECT_DIR$/posts/templates/post_detail.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/posts/templates/tag_posts.html" beforeDir="false" afterPath="$PROJECT_DIR$/posts/templates/tag_posts.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/base.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -16,9 +20,9 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="CSS File" />
         <option value="HTML File" />
         <option value="Python Script" />
+        <option value="CSS File" />
       </list>
     </option>
   </component>
@@ -98,6 +102,7 @@
       <workItem from="1654763565621" duration="77786000" />
       <workItem from="1655264878909" duration="26219000" />
       <workItem from="1655561850339" duration="14486000" />
+      <workItem from="1655664127594" duration="1819000" />
     </task>
     <servers />
   </component>
