@@ -133,3 +133,6 @@ dmypy.json
 
 # Media folder
 media/
+
+# Node
+node_modules/
