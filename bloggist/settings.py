@@ -157,3 +157,8 @@ LOGOUT_REDIRECT_URL = 'home'
 
 
 TAGGIT_CASE_INSENSITIVE = True
+
+FROALA_EDITOR_PLUGINS = ('align', 'char_counter', 'code_beautifier', 'code_view', 'colors', 'draggable', 'emoticons',
+                         'entities', 'file', 'font_family', 'font_size', 'fullscreen', 'image_manager', 'image', 'inline_style',
+                         'line_breaker', 'link', 'lists', 'paragraph_format', 'paragraph_style', 'quote', 'save', 'table',
+                         'url', 'video')
