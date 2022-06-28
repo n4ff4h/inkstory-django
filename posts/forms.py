@@ -2,7 +2,7 @@ from statistics import mode
 from django import forms
 from .models import Post
 from taggit.forms import TagWidget, TagField
-from django_editorjs import EditorJsWidget
+from froala_editor.widgets import FroalaEditor
 
 
 class PostCreateForm(forms.ModelForm):
@@ -11,6 +11,8 @@ class PostCreateForm(forms.ModelForm):
                                             'class': 'block p-2 mb-4 w-full text-gray-900 bg-gray-50 rounded-lg border '
                                                      'border-gray-300 sm:text-xs focus:ring-blue-500 '
                                                      'focus:border-blue-500'}), )
+
+    body = forms.CharField(widget=FroalaEditor)
 
     class Meta:
         model = Post
@@ -45,6 +47,8 @@ class PostUpdateForm(forms.ModelForm):
                                             'class': 'block p-2 mb-4 w-full text-gray-900 bg-gray-50 rounded-lg border '
                                                      'border-gray-300 sm:text-xs focus:ring-blue-500 '
                                                      'focus:border-blue-500'}), )
+
+    body = forms.CharField(widget=FroalaEditor)
 
     class Meta:
         model = Post

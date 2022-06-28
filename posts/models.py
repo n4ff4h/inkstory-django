@@ -3,20 +3,21 @@ from django.contrib.auth.models import User
 from django.urls import reverse
 from datetime import datetime, date
 from taggit.managers import TaggableManager
-from django_quill.fields import QuillField
+from froala_editor.fields import FroalaField
 
 
 class Post(models.Model):
     title = models.CharField(max_length=255)
     slug = models.SlugField(unique=True)
-    header_image = models.ImageField(null=True, blank=True, upload_to='images/')
+    header_image = models.ImageField(
+        null=True, blank=True, upload_to='images/')
     # model.CASCADE: will delete all posts related to the user, if user is deleted
     author = models.ForeignKey(User, default=None, on_delete=models.CASCADE)
     tags = TaggableManager()
-    body = QuillField()
+    snippet = models.CharField(max_length=255)
+    body = FroalaField()
 
     likes = models.ManyToManyField(User, related_name="blog_posts")
-    snippet = models.CharField(max_length=255)
     post_date = models.DateTimeField(auto_now_add=True)
 
     def total_likes(self):

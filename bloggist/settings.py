@@ -49,11 +49,9 @@ INSTALLED_APPS = [
     'accounts',
 
     # Other Django apps
-    'tailwind',
-    'theme',
+    # 'compressor',
     'taggit',
-    'django_quill',
-    'django_browser_reload',
+    'froala_editor',
 ]
 
 MIDDLEWARE = [
@@ -64,8 +62,6 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
-
-    'django_browser_reload.middleware.BrowserReloadMiddleware',
 ]
 
 ROOT_URLCONF = 'bloggist.urls'
@@ -149,11 +145,12 @@ MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
-TAILWIND_APP_NAME = 'theme'
+# Configure compressor
+# COMPRESS_ROOT = BASE_DIR / 'static'
 
-INTERNAL_IPS = [
-    "127.0.0.1",
-]
+# COMPRESS_ENABLED = True
+
+# STATICFILES_FINDERS = ('compressor.finders.CompressorFinder',)
 
 LOGIN_REDIRECT_URL = 'home'
 LOGOUT_REDIRECT_URL = 'home'

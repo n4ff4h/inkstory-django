@@ -1,2 +1,3 @@
 # bloggist
+
 Django blog app
