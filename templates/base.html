@@ -6,7 +6,7 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>{% block title %} Bloggist {% endblock %}</title>
+  <title>{% block title %} InkStory {% endblock %}</title>
 
 
   <link rel="stylesheet" href="{% static 'src/output.css' %}">
@@ -31,7 +31,7 @@
     <nav class="border-gray-200 px-2 sm:px-4 py-7 mb-0 sm:mb-5 md:mb-10 rounded">
       <div class="container flex flex-wrap justify-between items-center mx-auto">
         <a href="{% url 'home' %}" class="flex items-center">
-          <span class="self-center text-[22px] font-bold font-rozha-one whitespace-nowrap">Bloggist</span>
+          <span class="self-center text-[22px] font-bold font-rozha-one whitespace-nowrap">InkStory</span>
         </a>
 
         {% if not user.is_authenticated %}
