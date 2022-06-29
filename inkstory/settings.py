@@ -52,6 +52,7 @@ INSTALLED_APPS = [
     # 'compressor',
     'taggit',
     'froala_editor',
+    'django_extensions',
 ]
 
 MIDDLEWARE = [
