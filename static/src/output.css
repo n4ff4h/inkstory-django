@@ -1022,11 +1022,6 @@ h5 {
   position: relative;
 }
 
-.sticky{
-  position: -webkit-sticky;
-  position: sticky;
-}
-
 .inset-0{
   top: 0px;
   right: 0px;
@@ -1189,10 +1184,6 @@ h5 {
   display: grid;
 }
 
-.contents{
-  display: contents;
-}
-
 .hidden{
   display: none;
 }
@@ -1307,10 +1298,6 @@ h5 {
 
 .flex-grow{
   flex-grow: 1;
-}
-
-.border-collapse{
-  border-collapse: collapse;
 }
 
 .-translate-x-full{
@@ -1928,10 +1915,6 @@ h5 {
   transition-property: opacity;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   transition-duration: 150ms;
-}
-
-.ease-in-out{
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .ease-out{
