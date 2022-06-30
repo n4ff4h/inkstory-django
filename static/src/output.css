@@ -1104,6 +1104,10 @@ h5 {
   margin-bottom: -0.25rem;
 }
 
+.mt-4{
+  margin-top: 1rem;
+}
+
 .mb-0{
   margin-bottom: 0px;
 }
@@ -1114,10 +1118,6 @@ h5 {
 
 .mr-3{
   margin-right: 0.75rem;
-}
-
-.mt-4{
-  margin-top: 1rem;
 }
 
 .mr-2{
