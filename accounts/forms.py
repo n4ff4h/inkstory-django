@@ -6,129 +6,53 @@ from django import forms
 class RegisterForm(UserCreationForm):
     first_name = forms.CharField(max_length=255,
                                  required=True,
-                                 widget=forms.TextInput(attrs={'class': 'bg-gray-50 border border-gray-300 '
-                                                                        'text-gray-900 text-sm rounded-lg '
-                                                                        'focus:ring-blue-500 focus:border-blue-500 '
-                                                                        'block w-full p-2.5 dark:bg-gray-700 '
-                                                                        'dark:border-gray-600 '
-                                                                        'dark:placeholder-gray-400 dark:text-white '
-                                                                        'dark:focus:ring-blue-500 '
-                                                                        'dark:focus:border-blue-500'}))
+                                 widget=forms.TextInput(attrs={'class': 'input-field'}))
 
     last_name = forms.CharField(max_length=255,
                                 required=True,
-                                widget=forms.TextInput(attrs={'class': 'bg-gray-50 border border-gray-300 '
-                                                                       'text-gray-900 text-sm rounded-lg '
-                                                                       'focus:ring-blue-500 focus:border-blue-500 '
-                                                                       'block w-full p-2.5 dark:bg-gray-700 '
-                                                                       'dark:border-gray-600 '
-                                                                       'dark:placeholder-gray-400 dark:text-white '
-                                                                       'dark:focus:ring-blue-500 '
-                                                                       'dark:focus:border-blue-500'}))
+                                widget=forms.TextInput(attrs={'class': 'input-field'}))
 
     username = forms.CharField(max_length=255,
                                required=True,
-                               widget=forms.TextInput(attrs={'class': 'bg-gray-50 border border-gray-300 '
-                                                                      'text-gray-900 text-sm rounded-lg '
-                                                                      'focus:ring-blue-500 focus:border-blue-500 '
-                                                                      'block w-full p-2.5 dark:bg-gray-700 '
-                                                                      'dark:border-gray-600 '
-                                                                      'dark:placeholder-gray-400 dark:text-white '
-                                                                      'dark:focus:ring-blue-500 '
-                                                                      'dark:focus:border-blue-500'}))
+                               widget=forms.TextInput(attrs={'class': 'input-field'}))
 
     email = forms.EmailField(max_length=255,
                              required=True,
-                             widget=forms.EmailInput(attrs={'class': 'bg-gray-50 border border-gray-300 '
-                                                                     'text-gray-900 text-sm rounded-lg '
-                                                                     'focus:ring-blue-500 focus:border-blue-500 '
-                                                                     'block w-full p-2.5 dark:bg-gray-700 '
-                                                                     'dark:border-gray-600 '
-                                                                     'dark:placeholder-gray-400 dark:text-white '
-                                                                     'dark:focus:ring-blue-500 '
-                                                                     'dark:focus:border-blue-500'}))
+                             widget=forms.EmailInput(attrs={'class': 'input-field'}))
 
     password1 = forms.CharField(max_length=255,
                                 required=True,
-                                widget=forms.PasswordInput(attrs={'class': 'bg-gray-50 border border-gray-300 '
-                                                                           'text-gray-900 text-sm rounded-lg '
-                                                                           'focus:ring-blue-500 focus:border-blue-500 '
-                                                                           'block w-full p-2.5 dark:bg-gray-700 '
-                                                                           'dark:border-gray-600 '
-                                                                           'dark:placeholder-gray-400 dark:text-white '
-                                                                           'dark:focus:ring-blue-500 '
-                                                                           'dark:focus:border-blue-500'}))
+                                widget=forms.PasswordInput(attrs={'class': 'input-field'}))
 
     password2 = forms.CharField(max_length=255,
                                 required=True,
-                                widget=forms.PasswordInput(attrs={'class': 'bg-gray-50 border border-gray-300 '
-                                                                           'text-gray-900 text-sm rounded-lg '
-                                                                           'focus:ring-blue-500 focus:border-blue-500 '
-                                                                           'block w-full p-2.5 dark:bg-gray-700 '
-                                                                           'dark:border-gray-600 '
-                                                                           'dark:placeholder-gray-400 dark:text-white '
-                                                                           'dark:focus:ring-blue-500 '
-                                                                           'dark:focus:border-blue-500'}))
+                                widget=forms.PasswordInput(attrs={'class': 'input-field'}))
 
     class Meta:
         model = User
-        fields = ['first_name', 'last_name', 'username', 'email', 'password1', 'password2']
+        fields = ['first_name', 'last_name', 'username',
+                  'email', 'password1', 'password2']
 
 
 class ProfileUpdateForm(UserChangeForm):
     first_name = forms.CharField(max_length=255,
                                  required=True,
-                                 widget=forms.TextInput(attrs={'class': 'bg-gray-50 border border-gray-300 '
-                                                                        'text-gray-900 text-sm rounded-lg '
-                                                                        'focus:ring-blue-500 focus:border-blue-500 '
-                                                                        'block w-full p-2.5 dark:bg-gray-700 '
-                                                                        'dark:border-gray-600 '
-                                                                        'dark:placeholder-gray-400 dark:text-white '
-                                                                        'dark:focus:ring-blue-500 '
-                                                                        'dark:focus:border-blue-500'}))
+                                 widget=forms.TextInput(attrs={'class': 'input-field'}))
 
     last_name = forms.CharField(max_length=255,
                                 required=True,
-                                widget=forms.TextInput(attrs={'class': 'bg-gray-50 border border-gray-300 '
-                                                                       'text-gray-900 text-sm rounded-lg '
-                                                                       'focus:ring-blue-500 focus:border-blue-500 '
-                                                                       'block w-full p-2.5 dark:bg-gray-700 '
-                                                                       'dark:border-gray-600 '
-                                                                       'dark:placeholder-gray-400 dark:text-white '
-                                                                       'dark:focus:ring-blue-500 '
-                                                                       'dark:focus:border-blue-500'}))
+                                widget=forms.TextInput(attrs={'class': 'input-field'}))
 
     username = forms.CharField(max_length=255,
                                required=True,
-                               widget=forms.TextInput(attrs={'class': 'bg-gray-50 border border-gray-300 '
-                                                                      'text-gray-900 text-sm rounded-lg '
-                                                                      'focus:ring-blue-500 focus:border-blue-500 '
-                                                                      'block w-full p-2.5 dark:bg-gray-700 '
-                                                                      'dark:border-gray-600 '
-                                                                      'dark:placeholder-gray-400 dark:text-white '
-                                                                      'dark:focus:ring-blue-500 '
-                                                                      'dark:focus:border-blue-500'}))
+                               widget=forms.TextInput(attrs={'class': 'input-field'}))
 
     email = forms.EmailField(max_length=255,
                              required=True,
-                             widget=forms.EmailInput(attrs={'class': 'bg-gray-50 border border-gray-300 '
-                                                                     'text-gray-900 text-sm rounded-lg '
-                                                                     'focus:ring-blue-500 focus:border-blue-500 '
-                                                                     'block w-full p-2.5 dark:bg-gray-700 '
-                                                                     'dark:border-gray-600 '
-                                                                     'dark:placeholder-gray-400 dark:text-white '
-                                                                     'dark:focus:ring-blue-500 '
-                                                                     'dark:focus:border-blue-500'}))
+                             widget=forms.EmailInput(attrs={'class': 'input-field'}))
 
     password = forms.CharField(max_length=255,
-                               widget=forms.PasswordInput(attrs={'class': 'bg-gray-50 border border-gray-300 '
-                                                                          'text-gray-900 text-sm rounded-lg '
-                                                                          'focus:ring-blue-500 focus:border-blue-500 '
-                                                                          'block w-full p-2.5 dark:bg-gray-700 '
-                                                                          'dark:border-gray-600 '
-                                                                          'dark:placeholder-gray-400 dark:text-white '
-                                                                          'dark:focus:ring-blue-500 '
-                                                                          'dark:focus:border-blue-500'}))
+                               widget=forms.PasswordInput(attrs={'class': 'input-field'}))
 
     class Meta:
         model = User
@@ -138,36 +62,15 @@ class ProfileUpdateForm(UserChangeForm):
 class UserPasswordChangeForm(PasswordChangeForm):
     old_password = forms.CharField(max_length=255,
                                    required=True,
-                                   widget=forms.PasswordInput(attrs={'class': 'bg-gray-50 border border-gray-300 '
-                                                                              'text-gray-900 text-sm rounded-lg '
-                                                                              'focus:ring-blue-500 focus:border-blue-500 '
-                                                                              'block w-full p-2.5 dark:bg-gray-700 '
-                                                                              'dark:border-gray-600 '
-                                                                              'dark:placeholder-gray-400 dark:text-white '
-                                                                              'dark:focus:ring-blue-500 '
-                                                                              'dark:focus:border-blue-500'}))
+                                   widget=forms.PasswordInput(attrs={'class': 'input-field'}))
 
     new_password1 = forms.CharField(max_length=255,
                                     required=True,
-                                    widget=forms.PasswordInput(attrs={'class': 'bg-gray-50 border border-gray-300 '
-                                                                               'text-gray-900 text-sm rounded-lg '
-                                                                               'focus:ring-blue-500 focus:border-blue-500 '
-                                                                               'block w-full p-2.5 dark:bg-gray-700 '
-                                                                               'dark:border-gray-600 '
-                                                                               'dark:placeholder-gray-400 dark:text-white '
-                                                                               'dark:focus:ring-blue-500 '
-                                                                               'dark:focus:border-blue-500'}))
+                                    widget=forms.PasswordInput(attrs={'class': 'input-field'}))
 
     new_password2 = forms.CharField(max_length=255,
                                     required=True,
-                                    widget=forms.PasswordInput(attrs={'class': 'bg-gray-50 border border-gray-300 '
-                                                                               'text-gray-900 text-sm rounded-lg '
-                                                                               'focus:ring-blue-500 focus:border-blue-500 '
-                                                                               'block w-full p-2.5 dark:bg-gray-700 '
-                                                                               'dark:border-gray-600 '
-                                                                               'dark:placeholder-gray-400 dark:text-white '
-                                                                               'dark:focus:ring-blue-500 '
-                                                                               'dark:focus:border-blue-500'}))
+                                    widget=forms.PasswordInput(attrs={'class': 'input-field'}))
 
     class Meta:
         model = User
