@@ -5,6 +5,12 @@
   "version": "0.2.0",
   "configurations": [
     {
+      "command": "npm run build",
+      "name": "Run npm build",
+      "request": "launch",
+      "type": "node-terminal"
+    },
+    {
       "name": "Python: Django",
       "type": "python",
       "request": "launch",
@@ -12,6 +18,13 @@
       "args": ["runserver"],
       "django": true,
       "justMyCode": true
+    }
+  ],
+  "compounds": [
+    {
+      "name": "Django/Tailwind",
+      "configurations": ["Python: Django", "Run npm build"],
+      "stopAll": true
     }
   ]
 }
