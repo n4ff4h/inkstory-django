@@ -5,6 +5,7 @@ from django.conf.urls.static import static
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+    path('oauth/', include('social_django.urls', namespace='social')),
     path('froala_editor/', include('froala_editor.urls')),
     path('', include('posts.urls')),
     path('registration/', include('django.contrib.auth.urls')),

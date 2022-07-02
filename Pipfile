@@ -19,6 +19,7 @@ rjsmin = "==1.2.0"
 sqlparse = "==0.4.2"
 toml = "==0.10.2"
 django-extensions = "*"
+social-auth-app-django = "*"
 
 [dev-packages]
 
