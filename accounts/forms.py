@@ -1,4 +1,4 @@
-from django.contrib.auth.forms import UserCreationForm, UserChangeForm, PasswordChangeForm
+from django.contrib.auth.forms import UserCreationForm, AuthenticationForm, UserChangeForm, PasswordChangeForm
 from django.contrib.auth.models import User
 from django import forms
 
@@ -28,10 +28,28 @@ class RegisterForm(UserCreationForm):
                                 required=True,
                                 widget=forms.PasswordInput(attrs={'class': 'input-field'}))
 
+    terms_and_privacy_policy = forms.BooleanField(
+        required=True, widget=forms.CheckboxInput(attrs={'class': 'checkbox'}))
+
     class Meta:
         model = User
         fields = ['first_name', 'last_name', 'username',
-                  'email', 'password1', 'password2']
+                  'email', 'password1', 'password2', 'terms_and_privacy_policy']
+
+
+class LoginForm(AuthenticationForm):
+    username = forms.CharField(max_length=100,
+                               required=True,
+                               widget=forms.TextInput(attrs={'class': 'input-field'}))
+    password = forms.CharField(max_length=50,
+                               required=True,
+                               widget=forms.PasswordInput(attrs={'class': 'input-field'}))
+    remember_me = forms.BooleanField(
+        required=False, widget=forms.CheckboxInput(attrs={'class': 'checkbox'}))
+
+    class Meta:
+        model = User
+        fields = ['username', 'password', 'remember_me']
 
 
 class ProfileUpdateForm(UserChangeForm):

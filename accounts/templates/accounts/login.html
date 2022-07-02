@@ -1,0 +1,41 @@
+{% extends 'base.html' %}
+
+<!-- Title -->
+{% block title %} Login {% endblock %}
+
+{% block content %}
+<div class="flex flex-col w-full sm:max-w-md mx-auto pb-[94px] px-2 sm:px-0">
+  <div class="my-auto">
+    <div class="p-4 w-full bg-white rounded-lg border border-gray-200 shadow sm:p-6 lg:p-8">
+      <form class="space-y-6" method="post">
+        {% csrf_token %}
+
+        <h5 class="text-xl font-semibold text-gray-900">Sign in to our platform</h5>
+        <div>
+          <label for="email" class="block mb-2 text-sm font-medium text-gray-900">Your email</label>
+          {{ form.username }}
+        </div>
+        <div>
+          <label for="password" class="block mb-2 text-sm font-medium text-gray-900">Your
+            password</label>
+          {{ form.password }}
+        </div>
+        <div class="flex items-start">
+          <div class="flex items-start">
+            <div class="flex items-center h-5">
+              {{ form.remember_me }}
+            </div>
+            <label for="remember" class="ml-2 text-sm font-medium text-gray-500">Remember me</label>
+          </div>
+          <a href="#" class="ml-auto link text-sm">Lost Password?</a>
+        </div>
+        <button type="submit" class="w-full btn-primary">Login
+          to your account</button>
+        <div class="text-sm font-medium text-gray-500">
+          Not registered? <a href="#" class="link">Create account</a>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
+{% endblock %}
