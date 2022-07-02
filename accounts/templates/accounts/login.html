@@ -7,14 +7,18 @@
 <div class="flex flex-col w-full sm:max-w-lg mx-auto pb-[94px] px-2 sm:px-0">
   <div class="my-auto">
     <div class="p-4 w-full bg-white rounded-lg border border-gray-200 shadow sm:p-8 lg:p-12">
+      <!-- Form -->
       <form class="space-y-6" method="post">
         {% csrf_token %}
 
+        <!-- Heading -->
         <h5 class="text-xl font-semibold text-gray-900">Sign in to our platform</h5>
 
         <div class="flex flex-col gap-1">
+          <!-- Google sign in button -->
           <a href="{% url 'social:begin' 'google-oauth2' %}"
             class="w-full text-white bg-[#4285F4] hover:bg-[#4285F4]/90 focus:ring-4 focus:outline-none focus:ring-[#4285F4]/50 font-medium rounded-lg text-sm px-5 py-2.5 text-center inline-flex items-center dark:focus:ring-[#4285F4]/55 mr-2 mb-2">
+            <!-- Google icon -->
             <svg class="w-4 h-4 mr-2 -ml-1" aria-hidden="true" focusable="false" data-prefix="fab" data-icon="google"
               role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 488 512">
               <path fill="currentColor"
@@ -23,8 +27,10 @@
             </svg>
             Sign in with Google
           </a>
+          <!-- GitHub sign in button -->
           <a href="{% url 'social:begin' 'github' %}"
             class="w-full text-white bg-[#24292F] hover:bg-[#24292F]/90 focus:ring-4 focus:outline-none focus:ring-[#24292F]/50 font-medium rounded-lg text-sm px-5 py-2.5 text-center inline-flex items-center dark:focus:ring-gray-500 dark:hover:bg-[#050708]/30 mr-2 mb-2">
+            <!-- GitHub icon -->
             <svg class="w-4 h-4 mr-2 -ml-1" aria-hidden="true" focusable="false" data-prefix="fab" data-icon="github"
               role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512">
               <path fill="currentColor"
@@ -35,29 +41,28 @@
           </a>
         </div>
 
+        <!-- Horizontal divider with text in middle -->
         <div class="flex items-center">
-          <!-- The left line -->
           <div class="flex-grow h-px bg-gray-300"></div>
-
-          <!-- Your text here -->
           <span class="flex-shrink text-gray-500 px-4">OR</span>
-
-          <!-- The right line -->
           <div class="flex-grow h-px bg-gray-300"></div>
         </div>
 
-        <!-- Username -->
+        <!-- Username field -->
         <div>
-          <label for="email" class="block mb-2 text-sm font-medium text-gray-900">Your username</label>
+          <label for="email" class="block mb-2 text-sm font-medium text-gray-900">
+            Your username
+          </label>
           {{ form.username }}
         </div>
-        <!-- Password -->
+        <!-- Password field -->
         <div>
           <label for="password" class="block mb-2 text-sm font-medium text-gray-900">Your
             password
           </label>
           {{ form.password }}
         </div>
+
         <div class="flex items-start">
           <div class="flex items-start">
             <!-- Remember-me checkbox -->
@@ -67,14 +72,16 @@
             <label for="remember" class="ml-2 text-sm font-medium text-gray-500">Remember me</label>
           </div>
 
-          <!-- Forgot password -->
+          <!-- Forgot password link -->
           <a href="#" class="ml-auto link text-sm">Forgot Password?</a>
         </div>
+
         <!-- Login button -->
         <button type="submit" class="w-full btn-primary">
           Login to your account
         </button>
-        <!-- Link to registration page -->
+
+        <!-- Registration page link -->
         <div class="text-sm font-medium text-gray-500">
           Not registered? <a href="{% url 'register' %}" class="link">Create account</a>
         </div>
