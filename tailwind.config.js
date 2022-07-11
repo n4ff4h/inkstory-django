@@ -4,6 +4,7 @@ module.exports = {
     "./**/templates/**/*.html",
     "./node_modules/flowbite/**/*.js",
     "./accounts/forms.py",
+    "./posts/forms.py",
   ],
   theme: {
     container: {

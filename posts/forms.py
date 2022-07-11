@@ -8,45 +8,33 @@ from froala_editor.widgets import FroalaEditor
 class PostCreateForm(forms.ModelForm):
     tags = TagField(help_text="",
                     widget=TagWidget(attrs={'placeholder': 'Eg: food, entertainment, sports',
-                                            'class': 'block p-2 mb-4 w-full text-gray-900 bg-gray-50 rounded-lg border '
-                                                     'border-gray-300 sm:text-xs focus:ring-blue-500 '
-                                                     'focus:border-blue-500'}), )
+                                            'class': 'input-field'}), )
 
-    body = forms.CharField(widget=FroalaEditor)
+    body = forms.CharField(widget=FroalaEditor(options={
+        'heightMin': '200'
+    }))
 
     class Meta:
         model = Post
         fields = ('title', 'slug', 'tags', 'header_image', 'snippet', 'body')
 
         widgets = {
-            'title': forms.TextInput(attrs={'class': 'block p-2 mb-4 w-full text-gray-900 bg-gray-50 rounded-lg border '
-                                                     'border-gray-300 sm:text-xs focus:ring-blue-500 '
-                                                     'focus:border-blue-500'}),
+            'title': forms.TextInput(attrs={'class': 'input-field'}),
 
-            'slug': forms.TextInput(attrs={'class': 'block p-2 mb-4 w-full text-gray-900 bg-gray-50 rounded-lg border '
-                                                    'border-gray-300 sm:text-xs focus:ring-blue-500 '
-                                                    'focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 '
-                                                    'dark:placeholder-gray-400 dark:text-white '
-                                                    'dark:focus:ring-blue-500 dark:focus:border-blue-500'}),
+            'slug': forms.TextInput(attrs={'class': 'input-field'}),
 
             'header_image': forms.FileInput(
-                attrs={'class': 'block mb-4 w-full text-sm text-gray-900 bg-gray-50 rounded-lg '
-                                'border border-gray-300 cursor-pointer '
-                                'focus:outline-none'}),
+                attrs={'class': 'hidden', 'id': 'dropzone-file', 'type': 'file'}),
 
             'snippet': forms.Textarea(
-                attrs={'rows': '4', 'class': 'block p-2 mb-4 w-full text-gray-900 bg-gray-50 rounded-lg border '
-                                             'border-gray-300 sm:text-xs focus:ring-blue-500 '
-                                             'focus:border-blue-500'}),
+                attrs={'rows': '4', 'class': 'input-field'}),
         }
 
 
 class PostUpdateForm(forms.ModelForm):
     tags = TagField(help_text="",
                     widget=TagWidget(attrs={'placeholder': 'Eg: food, entertainment, sports',
-                                            'class': 'block p-2 mb-4 w-full text-gray-900 bg-gray-50 rounded-lg border '
-                                                     'border-gray-300 sm:text-xs focus:ring-blue-500 '
-                                                     'focus:border-blue-500'}), )
+                                            'class': 'input-field'}), )
 
     body = forms.CharField(widget=FroalaEditor)
 
@@ -55,21 +43,15 @@ class PostUpdateForm(forms.ModelForm):
         fields = ('title', 'slug', 'tags', 'header_image', 'snippet', 'body')
 
         widgets = {
-            'title': forms.TextInput(attrs={
-                'class': 'block p-2 mb-4 w-full text-gray-900 bg-gray-50 rounded-lg border border-gray-300 sm:text-xs '
-                         'focus:ring-blue-500 focus:border-blue-500'}),
+            'title': forms.TextInput(
+                attrs={'class': 'input-field'}),
 
-            'slug': forms.TextInput(attrs={'class': 'block p-2 mb-4 w-full text-gray-900 bg-gray-50 rounded-lg border '
-                                                    'border-gray-300 sm:text-xs focus:ring-blue-500 '
-                                                    'focus:border-blue-500'}),
+            'slug': forms.TextInput(
+                attrs={'class': 'input-field'}),
 
             'header_image': forms.FileInput(
-                attrs={'class': 'block mb-4 w-full text-sm text-gray-900 bg-gray-50 rounded-lg '
-                                'border border-gray-300 cursor-pointer'
-                                'focus:outline-none'}),
+                attrs={'class': 'hidden', 'id': 'dropzone-file', 'type': 'file'}),
 
             'snippet': forms.Textarea(
-                attrs={'rows': '4', 'class': 'block p-2 mb-4 w-full text-gray-900 bg-gray-50 rounded-lg border '
-                                             'border-gray-300 sm:text-xs focus:ring-blue-500 '
-                                             'focus:border-blue-500'}),
+                attrs={'rows': '4', 'class': 'input-field'}),
         }
